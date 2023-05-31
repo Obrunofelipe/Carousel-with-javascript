@@ -1,0 +1,54 @@
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel{
+    width: 1200px;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto; 
+}
+
+i{
+    background-color:lightgrey;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+#Left{
+    margin-right: -30px;
+    z-index: 2;
+    opacity: 0;
+}
+
+#Right{
+    margin-left: -30px;
+    z-index: 2;
+    opacity: 100;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
