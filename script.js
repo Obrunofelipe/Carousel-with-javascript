@@ -1,12 +1,10 @@
 const carousel = document.querySelector('.carousel'),
-img = carousel.querySelectorAll('img')[0],
 icons = document.querySelectorAll('i')
 
 let positionDiff, 
 initialPositon,
 isDragStart = false, 
 valueScrollLeft
-
 
 icons.forEach((icon) => {
     icon.addEventListener('click' , () => {
@@ -18,7 +16,6 @@ function verifyIcons(){
     icons[0].style.opacity = carousel.scrollLeft == 0 ? '0' : '100'
     icons[1].style.display = carousel.scrollLeft == 2400 ? '0' : '100'
 }
-
 
 function reajustCarousel(){   
     let valueScroll = carousel.scrollLeft
@@ -55,8 +52,6 @@ function dragStop(e){
     reajustCarousel()
     verifyIcons()
 }
-
-
 
 carousel.addEventListener("mousemove", dragging)
 carousel.addEventListener("touchmove", dragging)
